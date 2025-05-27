@@ -58,29 +58,30 @@
 
 ### users:
 
--id
--login
--username
--gender
+- id
+- login
+- username
+- gender
 
 ### books:
 
--id
--title
--author
--genre
+- id
+- title
+- author
+- genre
 
 ### shop:
 
--id
--name
--city
+- id
+- name
+- city
 
 Каких-то связей между ними провести через foreign key не получится, так как все связи между книгами, пользователями и магазинами можно описать только через отношения many-to-many.
 
 Для вертикального шардинга разобьём базу данных на три, по одной на каждую таблицу:
 
-Alt text
+![12 7 2 1](https://github.com/user-attachments/assets/6bf74120-a92c-4475-a296-33639155c478)
+
 
 У нас будут три инстанса, на каждом по базе данных (users, books, stores); на каждой будут содержаться одноимённые таблицы, по одной на каждую БД.
 
